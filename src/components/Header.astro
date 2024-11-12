@@ -5,32 +5,51 @@ import PersonalLogo from '../images/personal-logo.svg'
 ---
 
 <header>
-  <nav>
+  <nav class='flex justify-between items-center w-full max-w-screen-xl mx-auto p-6 h-full'>
     <figure>
       <Image src={PersonalLogo} alt='Ethan Salonga personal logo' class='w-12 h-12' />
     </figure>
     <ul class='flex items-center'>
       <li class='mx-3 cursor-pointer hidden sm:list-item'>
-        <a href='#' class='text-242424 font-bold relative link-hover-effect link-hover-effect--black'>
+        <button id='about' class='text-242424 font-bold relative link-hover-effect link-hover-effect--black'>
           About
-        </a>
+        </button>
       </li>
       <li class='mx-3 cursor-pointer hidden sm:list-item'>
         <a href='#projects' class='text-242424 font-bold relative link-hover-effect link-hover-effect--black'>
           Projects
         </a>
       </li>
-      <li class='mx-3 cursor-pointer hidden sm:list-item'>
-        <a href='#' class='text-242424 font-bold relative link-hover-effect link-hover-effect--black'>
-          Contact
-        </a>
-      </li>
       <li class='mx-3 cursor-pointer hidden sm:list-item click'>
-        <Icon name="mdi:circle-half-full" class='text-242424 font-bold w-6 h-6' />
+        <Icon name='mdi:circle-half-full' id='dark-mode' class='text-242424 font-bold w-6 h-6' />
       </li>
     </ul>
   </nav>
 </header>
+
+<script>
+  import { isModalOpen, isDarkMode } from '../store'
+
+  function toggleModal() {
+    if (isModalOpen.get()) {
+      isModalOpen.set(false)
+      return document.body.classList.remove("modal--open")
+    }
+    isModalOpen.set(true)
+    document.body.classList.add("modal--open")
+  }
+  document.getElementById('about')?.addEventListener('click', toggleModal)
+
+  function toggleDarkMode () {
+    isDarkMode.set(!isDarkMode.get())
+    if (!isDarkMode.get()) {
+      document.body.classList.add("dark-theme")
+    } else {
+      document.body.classList.remove("dark-theme")
+    }
+  }
+  document.getElementById('dark-mode')?.addEventListener('click', toggleDarkMode)
+</script>
 
 <style>
   .link-hover-effect:after {
