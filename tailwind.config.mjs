@@ -4,7 +4,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				242424: '#242424'
+				242424: '#242424',
+				F5F5F5: '#F5F5F5',
+				fishbones: '#4895BF',
+				powpow: '#97477C'
 			}
 		},
 	},

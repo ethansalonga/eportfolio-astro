@@ -1,3 +1,9 @@
+/* 
+
+  UNIVERSAL STYLES
+  
+*/
+
 .container {
   padding: 50px 0;
   width: 100%;
@@ -9,6 +15,22 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 12px;
+}
+
+header,
+#hero,
+.scroll {
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease;
+}
+
+.modal--open header,
+.modal--open #hero,
+.modal--open .scroll {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease;
 }
 
 .click {
@@ -40,7 +62,7 @@
 }
 
 .link-hover-effect--white:after {
-  background-color: #fff;
+  background-color: #F5F5F5;
 }
 
 .link-hover-effect--black:after {
@@ -50,4 +72,88 @@
 .link-hover-effect:hover:after {
   left: 0;
   width: 100%;
+}
+
+/* 
+
+  DARK THEME
+  
+*/
+
+.dark-theme .nav-link,
+.dark-theme .title,
+.dark-theme .hero-para,
+.dark-theme .section__title,
+.dark-theme .section__sub-title {
+  color: #F5F5F5;
+}
+
+.dark-theme #personal-logo {
+  filter: invert(1);
+}
+
+.dark-theme header,
+.dark-theme section {
+  background-color: #242424;
+}
+
+.dark-theme .scroll__icon {
+  border-color: #F5F5F5;
+}
+
+.dark-theme .scroll__icon:after,
+.dark-theme .link-hover-effect--black:after {
+  background-color: #F5F5F5;
+}
+
+.dark-theme .mail__btn {
+  background-color: #F5F5F5;
+  color: #242424;
+}
+
+/* 
+
+  HEADER
+  
+*/
+
+.nav-link {
+  color: #242424;
+  font-weight: 700;
+}
+
+/* 
+
+  HERO
+  
+*/
+
+
+#hero {
+  min-height: calc(100vh - 96px);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 30px;
+  z-index: 1;
+}
+
+.title {
+  font-size: 76px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1;
+}
+
+.hero-para {
+  font-size: 24px;
+  line-height: 2;
+  max-width: 450px;
 }

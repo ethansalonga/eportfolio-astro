@@ -4,8 +4,8 @@ import { Icon } from 'astro-icon/components'
 import PersonalLogo from '../images/personal-logo.svg'
 import Resume from '../pdfs/resume.pdf'
 
-const githubLink = 'https://github.com/ethansalonga'
 const linkedinLink = 'https://www.linkedin.com/in/ethan-salonga/'
+const githubLink = 'https://github.com/ethansalonga'
 const currentYear = new Date().getFullYear()
 ---
 
@@ -22,27 +22,27 @@ const currentYear = new Date().getFullYear()
     </a>
     <ul class='w-full max-w-lg flex justify-around my-7'>
       <li>
-        <a href={githubLink} target='_blank' class='text-white link-hover-effect link-hover-effect--white'>
-          GitHub
-        </a>
-      </li>
-      <li>
-        <a href={linkedinLink} target='_blank' class='text-white link-hover-effect link-hover-effect--white'>
+        <a href={linkedinLink} target='_blank' class='text-F5F5F5 link-hover-effect link-hover-effect--white'>
           LinkedIn
         </a>
       </li>
       <li>
-        <a href='#' id='contact' class='text-white link-hover-effect link-hover-effect--white'>
+        <a href={githubLink} target='_blank' class='text-F5F5F5 link-hover-effect link-hover-effect--white'>
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a href='#' id='contact' class='text-F5F5F5 link-hover-effect link-hover-effect--white'>
           Contact
         </a>
       </li>
       <li>
-        <a href={Resume} target='_blank' class='text-white link-hover-effect link-hover-effect--white'>
+        <a href={Resume} target='_blank' class='text-F5F5F5 link-hover-effect link-hover-effect--white'>
           Resume
         </a>
       </li>
     </ul>
-    <p class='text-white'>Copyright &copy; Ethan Salonga {currentYear}</p>
+    <p class='text-F5F5F5'>Copyright &copy; Ethan Salonga {currentYear}</p>
   </div>
 </footer>
 
@@ -52,10 +52,10 @@ const currentYear = new Date().getFullYear()
   function toggleModal() {
     if (isModalOpen.get()) {
       isModalOpen.set(false)
-      return document.body.classList.remove("modal--open")
+      return document.body.classList.remove('modal--open')
     }
     isModalOpen.set(true)
-    document.body.classList.add("modal--open")
+    document.body.classList.add('modal--open')
   }
   document.getElementById('contact')?.addEventListener('click', toggleModal)
 </script>
@@ -72,7 +72,7 @@ const currentYear = new Date().getFullYear()
     font-weight: 700;
     opacity: 0;
     transition: all 300ms ease;
-    color: white;
+    color: #F5F5F5;
   }
 
   .footer-anchor:hover .footer-logo-popper {

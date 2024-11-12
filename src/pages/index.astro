@@ -1,8 +1,58 @@
 ---
+import { Icon } from 'astro-icon/components'
 import BaseLayout from '../layouts/BaseLayout.astro'
+import Resume from '../pdfs/resume.pdf'
+import '../styles/global.css'
+
 const pageTitle = 'Ethan Salonga | Technical Writer'
+const linkedinLink = 'https://www.linkedin.com/in/ethan-salonga/'
+const githubLink = 'https://github.com/ethansalonga'
 ---
 
 <BaseLayout pageTItle={pageTitle}>
-	<h1>Index</h1>
+	<section id='hero'>
+		<div class='hero-content'>
+			<h1 class='title'>Hey,</h1>
+			<h1 class='title text-fishbones'>I'm Ethan.</h1>
+			<p class='hero-para'>
+				I'm an aspiring <b class='text-fishbones'>Technical Writer</b> with a professional
+				background in biomedical engineering and web development.
+				<br />
+				Here's a bit more{' '}<b id='about-me' class='text-powpow click'>about me</b>.
+			</p>
+			<ul class='mt-4 flex'>
+				<a
+					href={linkedinLink}
+					target='_blank'
+					class='bg-powpow text-F5F5F5 w-9 h-9 text-xl mr-3 flex justify-center items-center rounded-full click'
+				>
+					<Icon name="mdi:linkedin" />
+				</a>
+				<a
+					href={githubLink}
+					target='_blank'
+					class='bg-powpow text-F5F5F5 w-9 h-9 text-xl mr-3 flex justify-center items-center rounded-full click'
+				>
+					<Icon name="mdi:github" />
+				</a>
+				<a href={Resume} target='_blank' class='bg-powpow text-F5F5F5 w-9 h-9 text-xl mr-3 flex justify-center items-center rounded-full click'>
+					<Icon name="mdi:file" />
+				</a>
+			</ul>
+		</div>
+	</section>
 </BaseLayout>
+
+<script>
+  import { isModalOpen } from '../store'
+
+  function toggleModal() {
+    if (isModalOpen.get()) {
+      isModalOpen.set(false)
+      return document.body.classList.remove('modal--open')
+    }
+    isModalOpen.set(true)
+    document.body.classList.add('modal--open')
+  }
+  document.getElementById('about-me')?.addEventListener('click', toggleModal)
+</script>
