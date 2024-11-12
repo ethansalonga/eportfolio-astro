@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
 import PersonalLogo from '../images/personal-logo.svg'
 ---
 
@@ -8,7 +9,7 @@ import PersonalLogo from '../images/personal-logo.svg'
     <figure>
       <Image src={PersonalLogo} alt='Ethan Salonga personal logo' class='w-12 h-12' />
     </figure>
-    <ul class='flex'>
+    <ul class='flex items-center'>
       <li class='mx-3 cursor-pointer hidden sm:list-item'>
         <a href='#' class='text-242424 font-bold relative link-hover-effect link-hover-effect--black'>
           About
@@ -25,9 +26,7 @@ import PersonalLogo from '../images/personal-logo.svg'
         </a>
       </li>
       <li class='mx-3 cursor-pointer hidden sm:list-item click'>
-        <a href='#' class='text-242424 font-bold relative link-hover-effect link-hover-effect--black'>
-          Contact
-        </a>
+        <Icon name="mdi:circle-half-full" class='text-242424 font-bold w-6 h-6' />
       </li>
     </ul>
   </nav>
