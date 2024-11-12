@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -120,7 +120,7 @@ header,
 }
 
 .link-hover-effect:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -3px;
   height: 3px;
@@ -141,6 +141,24 @@ header,
 .link-hover-effect:hover:after {
   left: 0;
   width: 100%;
+}
+
+.mail-btn {
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #242424;
+  color: white;
+  position: fixed;
+  bottom: 32px;
+  right: 40px;
+  z-index: 100;
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 
@@ -175,7 +193,7 @@ header,
   background-color: #F5F5F5;
 }
 
-.dark-theme .mail__btn {
+.dark-theme .mail-btn {
   background-color: #F5F5F5;
   color: #242424;
 }

@@ -26,20 +26,25 @@ const githubLink = 'https://github.com/ethansalonga'
 					target='_blank'
 					class='bg-powpow text-F5F5F5 w-8 h-8 text-xl mr-3 flex justify-center items-center rounded-full click'
 				>
-					<Icon name="mdi:linkedin" />
+					<Icon name='mdi:linkedin' />
 				</a>
 				<a
 					href={githubLink}
 					target='_blank'
 					class='bg-powpow text-F5F5F5 w-8 h-8 text-xl mr-3 flex justify-center items-center rounded-full click'
 				>
-					<Icon name="mdi:github" />
+					<Icon name='mdi:github' />
 				</a>
 				<a href={Resume} target='_blank' class='bg-powpow text-F5F5F5 w-8 h-8 text-xl mr-3 flex justify-center items-center rounded-full click'>
-					<Icon name="mdi:file" />
+					<Icon name='mdi:file' />
 				</a>
 			</ul>
 		</div>
+		<a href='#'>
+			<button id='mail-btn' class='mail-btn click'>
+				<Icon name='mdi:envelope' />
+			</button>
+		</a>
 	</section>
 </BaseLayout>
 
@@ -55,4 +60,5 @@ const githubLink = 'https://github.com/ethansalonga'
     document.body.classList.add('modal--open')
   }
   document.getElementById('about-me')?.addEventListener('click', toggleModal)
+  document.getElementById('mail-btn')?.addEventListener('click', toggleModal)
 </script>
