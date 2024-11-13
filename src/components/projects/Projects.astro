@@ -61,7 +61,7 @@ const projectsArr = [
                   </a>
                 )}
                 <a href={project.projectLink} target='_blank' class='project-description-link'>
-                  <Icon name="mdi:link-variant" class='w-8 h-8' />
+                  <Icon name='mdi:link-variant' class='w-8 h-8' />
                 </a>
               </div>
             </div>
@@ -117,7 +117,7 @@ const projectsArr = [
     transform: translateY(100%);
     opacity: 0;
     transition: opacity 300ms, transform 450ms ease;
-    color: white;
+    color: #F5F5F5;
     max-width: 550px;
   }
 
@@ -134,7 +134,7 @@ const projectsArr = [
   }
 
   .project-description-link {
-    color: white;
+    color: #F5F5F5;
     font-size: 20px;
     margin-right: 16px;
     transition: color 300ms ease;
@@ -142,5 +142,22 @@ const projectsArr = [
 
   .project-description-link:hover {
     color: #BF76A6;
+  }
+
+  @media (max-width: 480px) {
+    .project-description-para {
+      display: none;
+    }
+
+    .project-description {
+      left: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .project-description-subtitle {
+      margin-bottom: 8px;
+    }
   }
 </style>

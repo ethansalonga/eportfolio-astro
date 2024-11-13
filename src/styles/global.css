@@ -42,9 +42,9 @@ input,
 textarea {
   width: 100%;
   background-color: #242424;
-  color: #fff;
+  color: #F5F5F5;
   outline: none;
-  border: 2px solid #c0c4cc;
+  border: 2px solid #C0C4CC;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -65,12 +65,12 @@ label {
 
 input:hover,
 textarea:hover {
-  border-color: #dcdfe6;
+  border-color: #DCDFE6;
 }
 
 input:focus,
 textarea:focus {
-  border-color: #97477c;
+  border-color: #97477C;
 }
 
 .container {
@@ -88,7 +88,8 @@ textarea:focus {
 
 header > *,
 #landing > *,
-.scroll {
+.scroll,
+#projects > * {
   opacity: 1;
   visibility: visible;
   transition: all 300ms 600ms;
@@ -96,7 +97,8 @@ header > *,
 
 .modal--open header > *,
 .modal--open #landing > *,
-.modal--open .scroll {
+.modal--open .scroll,
+.modal--open #projects > * {
   opacity: 0;
   visibility: hidden;
   transition: all 400ms;
@@ -282,6 +284,26 @@ header > *,
   }
 }
 
+@media (max-width: 768px) {
+  .landing-title {
+    font-size: 80px;
+  }
+
+  .landing-para {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-title {
+    font-size: 52px;
+  }
+
+  .landing-para {
+    font-size: 18px;
+  }
+}
+
 /* 
 
   MODAL
@@ -386,9 +408,9 @@ header > *,
 }
 
 .form-submit {
-  background-color: #97477c;
-  border: 2px solid #97477c;
-  color: white;
+  background-color: #97477C;
+  border: 2px solid #97477C;
+  color: #F5F5F5;
   font-weight: 700;
   width: 100%;
   max-width: 240px;
@@ -398,13 +420,13 @@ header > *,
 }
 
 .form-submit:hover {
-  border-color: #fff;
+  border-color: #F5F5F5;
   background-color: transparent;
 }
 
 .form-submit:active {
-  border-color: #97477c;
-  color: #97477c;
+  border-color: #97477C;
+  color: #97477C;
 }
 
 .modal-overlay {
@@ -425,7 +447,7 @@ header > *,
 }
 
 .modal-overlay--success {
-  background-color: #59BF48;
+  background-color: #4895BF;
   font-size: 40px;
   font-weight: 700;
   text-align: center;
@@ -448,6 +470,28 @@ header > *,
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+
+  .modal-half {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-half {
+    padding: 40px;
   }
 }
 

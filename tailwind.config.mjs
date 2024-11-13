@@ -8,6 +8,9 @@ export default {
 				F5F5F5: '#F5F5F5',
 				fishbones: '#4895BF',
 				powpow: '#97477C'
+			},
+			screens: {
+				480: '480px'
 			}
 		},
 	},

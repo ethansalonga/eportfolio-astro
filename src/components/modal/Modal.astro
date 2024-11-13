@@ -69,14 +69,14 @@ import '../../styles/global.css'
         <label for='message'>Message</label>
         <textarea id='message' name='message' required />
       </div>
-      <button type="submit" class="form-submit">
+      <button type='submit' class='form-submit'>
         Send it my way
       </button>
     </form>
-    <div class="modal-overlay modal-overlay--loading">
-      <Icon name="mdi:loading" class='spinner' />
+    <div class='modal-overlay modal-overlay--loading'>
+      <Icon name='mdi:loading' class='spinner' />
     </div>
-    <div class="modal-overlay modal-overlay--success">
+    <div class='modal-overlay modal-overlay--success'>
       Thanks for the message! Looking forward to speaking with you soon.
     </div>
   </section>
@@ -99,25 +99,25 @@ import '../../styles/global.css'
   function contact(e: SubmitEvent) {
     e.preventDefault()
 
-    const loading = document.querySelector(".modal-overlay--loading")!
-    const success = document.querySelector(".modal-overlay--success")!
-    loading.classList.add("modal-overlay--visible")
+    const loading = document.querySelector('.modal-overlay--loading')!
+    const success = document.querySelector('.modal-overlay--success')!
+    loading.classList.add('modal-overlay--visible')
 
     emailjs
       .sendForm(
-        "service_ixruf82",
-        "template_hdrdoj8",
+        'service_ixruf82',
+        'template_hdrdoj8',
         e.target as HTMLFormElement,
-        "user_dAU3g6AZMCL24O4sHSoQu"
+        'user_dAU3g6AZMCL24O4sHSoQu'
       )
       .then(() => {
-        loading.classList.remove("modal-overlay--visible")
-        success.classList.add("modal-overlay--visible")
+        loading.classList.remove('modal-overlay--visible')
+        success.classList.add('modal-overlay--visible')
       })
       .catch(() => {
-        loading.classList.remove("modal-overlay--visible")
+        loading.classList.remove('modal-overlay--visible')
         alert(
-          "The e-mail service is temporarily unavailable. Please contact me directly at ethan@ethansalonga.dev!"
+          'The e-mail service is temporarily unavailable. Please contact me directly at ethan@ethansalonga.dev!'
         )
       })
   }
