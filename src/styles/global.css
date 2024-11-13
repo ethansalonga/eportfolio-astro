@@ -34,7 +34,7 @@ button {
 
 header,
 section {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   transition: all 300ms ease;
 }
 
@@ -131,7 +131,7 @@ header > *,
 }
 
 .link-hover-effect--white:after {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
 }
 
 .link-hover-effect--black:after {
@@ -170,9 +170,9 @@ header > *,
 .dark-theme .nav-link,
 .dark-theme .landing-title,
 .dark-theme .landing-para,
-.dark-theme .section__title,
-.dark-theme .section__sub-title {
-  color: #f5f5f5;
+.dark-theme .projects-title,
+.dark-theme .section-subtitle {
+  color: #F5F5F5;
 }
 
 .dark-theme #personal-logo {
@@ -180,21 +180,22 @@ header > *,
 }
 
 .dark-theme header,
-.dark-theme #landing {
+.dark-theme #landing,
+.dark-theme #projects {
   background-color: #242424;
 }
 
 .dark-theme .scroll-icon {
-  border-color: #f5f5f5;
+  border-color: #F5F5F5;
 }
 
 .dark-theme .scroll-icon:after,
 .dark-theme .link-hover-effect--black:after {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
 }
 
 .dark-theme .mail-btn {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   color: #242424;
 }
 
@@ -448,4 +449,17 @@ header > *,
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* 
+
+  PROJECTS
+  
+*/
+
+.projects-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  position: relative;
 }
