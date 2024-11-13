@@ -1,10 +1,14 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro'
 import Image from 'astro/components/Image.astro'
 import { Icon } from 'astro-icon/components'
-import MensHealthClinicScreenshot from '../../images/mens-health-clinic.webp'
-import SumpSearchScreenshot from '../../images/sump-search.webp'
-import MythicScreenshot from '../../images/mythic-ecommerce.webp'
-import '../../styles/global.css'
+import MensHealthClinicScreenshot from '../images/mens-health-clinic.webp'
+import SumpSearchScreenshot from '../images/sump-search.webp'
+import MythicScreenshot from '../images/mythic-ecommerce.webp'
+import '../styles/global.css'
+
+const pageTitle = 'Ethan Salonga | Coding Portfolio'
+const pageDescription = 'Explore Ethan Salonga\'s web development projects, featuring innovative front-end designs, interactive user experiences, and clean, efficient code. See how I bring ideas to life through technology.'
 
 const projectsArr = [
   {
@@ -39,38 +43,40 @@ const projectsArr = [
 ]
 ---
 
-<section id='projects'>
-  <div class='container row'>
-    <h2 class='projects-title font-bold'>
-      Here are some of my <span class='text-fishbones'>projects</span>
-    </h2>
-    <ul>
-      {projectsArr.map((project) => (
-        <li class='pb-32'>
-          <div class='project-wrapper'>
-            <Image src={project.screenshot} alt={project.alt} class='project-img' />
-            <div class='project-wrapper-bg' />
-            <div class='project-description'>
-              <h3 class='project-description-title font-bold'>{project.title}</h3>
-              <h4 class='project-description-subtitle font-bold'>{project.languages}</h4>
-              <p class='project-description-para'>{project.description}</p>
-              <div class='flex'>
-                {project.githubLink && (
-                  <a href={project.githubLink} target='_blank' class='project-description-link'>
-                    <Icon name='mdi:github' class='w-8 h-8' />
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <section id='projects'>
+    <div class='container row'>
+      <h2 class='projects-title font-bold'>
+        Here are some of my <span class='text-fishbones'>coding projects:</span>
+      </h2>
+      <ul>
+        {projectsArr.map((project) => (
+          <li class='pb-32'>
+            <div class='project-wrapper'>
+              <Image src={project.screenshot} alt={project.alt} class='project-img' />
+              <div class='project-wrapper-bg' />
+              <div class='project-description'>
+                <h3 class='project-description-title font-bold'>{project.title}</h3>
+                <h4 class='project-description-subtitle font-bold'>{project.languages}</h4>
+                <p class='project-description-para'>{project.description}</p>
+                <div class='flex'>
+                  {project.githubLink && (
+                    <a href={project.githubLink} target='_blank' class='project-description-link'>
+                      <Icon name='mdi:github' class='w-8 h-8' />
+                    </a>
+                  )}
+                  <a href={project.projectLink} target='_blank' class='project-description-link'>
+                    <Icon name='mdi:link-variant' class='w-8 h-8' />
                   </a>
-                )}
-                <a href={project.projectLink} target='_blank' class='project-description-link'>
-                  <Icon name='mdi:link-variant' class='w-8 h-8' />
-                </a>
+                </div>
               </div>
             </div>
-          </div>
-        </li>
-      ))}
-    </ul>
-  </div>
-</section>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
 
 <style>
   .project-img {

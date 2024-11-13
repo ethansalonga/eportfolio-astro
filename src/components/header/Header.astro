@@ -7,9 +7,11 @@ import '../../styles/global.css'
 
 <header>
   <nav class='flex justify-between items-center w-full max-w-screen-xl mx-auto p-6 h-full'>
-    <figure>
-      <Image src={PersonalLogo} alt='Ethan Salonga personal logo' id='personal-logo' class='w-12 h-12' />
-    </figure>
+    <a href='/'>
+      <figure>
+        <Image src={PersonalLogo} alt='Ethan Salonga personal logo' id='personal-logo' class='w-12 h-12 click' />
+      </figure>
+    </a>
     <ul class='flex items-center'>
       <li class='mx-3 cursor-pointer hidden 480:list-item'>
         <a href='#' id='about' class='nav-link link-hover-effect link-hover-effect--black'>
@@ -17,7 +19,7 @@ import '../../styles/global.css'
         </a>
       </li>
       <li class='mx-3 cursor-pointer hidden 480:list-item'>
-        <a href='#projects' class='nav-link link-hover-effect link-hover-effect--black'>
+        <a href='/projects' class='nav-link link-hover-effect link-hover-effect--black'>
           Projects
         </a>
       </li>
