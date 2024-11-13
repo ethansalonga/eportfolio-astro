@@ -1,6 +1,8 @@
 ---
 import Header from '../components/header/Header.astro'
+import Modal from '../components/modal/Modal.astro'
 import Footer from '../components/footer/Footer.astro'
+import { Icon } from 'astro-icon/components'
 
 const { pageTitle, pageDescription } = Astro.props
 ---
@@ -16,9 +18,29 @@ const { pageTitle, pageDescription } = Astro.props
   </head>
   <body class='dark-theme'>
     <Header />
+    <Modal />
     <main>
       <slot />
     </main>
+    <a href='#'>
+      <button id='mail-btn' class='mail-btn click'>
+        <Icon name='mdi:envelope' />
+      </button>
+    </a>
     <Footer />
   </body>
 </html>
+
+<script>
+  import { isModalOpen } from '../store'
+
+  function toggleModal() {
+    if (isModalOpen.get()) {
+      isModalOpen.set(false)
+      return document.body.classList.remove('modal--open')
+    }
+    isModalOpen.set(true)
+    document.body.classList.add('modal--open')
+  }
+  document.getElementById('mail-btn')?.addEventListener('click', toggleModal)
+</script>

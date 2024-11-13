@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Modal from '../components/modal/Modal.astro'
 import Landing from '../components/landing/Landing.astro'
 import '../styles/global.css'
 
@@ -9,7 +8,6 @@ const pageDescription = 'Welcome to Ethan Salonga\'s eportfolio – explore my j
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-	<Modal />
 	<Landing />
 </BaseLayout>
 
@@ -25,5 +23,4 @@ const pageDescription = 'Welcome to Ethan Salonga\'s eportfolio – explore my j
     document.body.classList.add('modal--open')
   }
   document.getElementById('about-me')?.addEventListener('click', toggleModal)
-  document.getElementById('mail-btn')?.addEventListener('click', toggleModal)
 </script>
