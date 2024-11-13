@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
-import PersonalLogo from '../images/personal-logo.svg'
-import '../styles/global.css'
+import PersonalLogo from '../../images/personal-logo.svg'
+import '../../styles/global.css'
 ---
 
 <header>
@@ -29,7 +29,7 @@ import '../styles/global.css'
 </header>
 
 <script>
-  import { isModalOpen, isDarkMode } from '../store'
+  import { isModalOpen, isDarkMode } from '../../store'
 
   function toggleModal() {
     if (isModalOpen.get()) {

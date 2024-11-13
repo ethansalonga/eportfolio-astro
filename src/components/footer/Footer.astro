@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
-import PersonalLogo from '../images/personal-logo.svg'
-import Resume from '../pdfs/resume.pdf'
+import PersonalLogo from '../../images/personal-logo.svg'
+import Resume from '../../pdfs/resume.pdf'
 
 const linkedinLink = 'https://www.linkedin.com/in/ethan-salonga/'
 const githubLink = 'https://github.com/ethansalonga'
@@ -47,7 +47,7 @@ const currentYear = new Date().getFullYear()
 </footer>
 
 <script>
-  import { isModalOpen } from '../store'
+  import { isModalOpen } from '../../store'
 
   function toggleModal() {
     if (isModalOpen.get()) {
