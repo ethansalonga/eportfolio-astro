@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon/components'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Resume from '../pdfs/resume.pdf'
+import Modal from '../components/Modal.astro'
 import '../styles/global.css'
 
 const pageTitle = 'Ethan Salonga | Technical Writer'
@@ -10,10 +11,11 @@ const githubLink = 'https://github.com/ethansalonga'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+	<Modal />
 	<section id='landing'>
 		<div class='landing-content'>
-			<h1 class='landing-title'>Hey,</h1>
-			<h1 class='landing-title text-fishbones'>I'm Ethan.</h1>
+			<p class='landing-title'>Hey,</p>
+			<h1 class='landing-title !text-fishbones'>I'm Ethan.</h1>
 			<p class='landing-para'>
 				I'm an aspiring <b class='text-fishbones'>Technical Writer</b> with a professional
 				background in biomedical engineering and web development.
@@ -45,8 +47,8 @@ const githubLink = 'https://github.com/ethansalonga'
 				<Icon name='mdi:envelope' />
 			</button>
 		</a>
-		<a href="#projects" class="scroll">
-			<div class="scroll-icon click"></div>
+		<a href='#projects' class='scroll'>
+			<div class='scroll-icon click'></div>
 		</a>
 	</section>
 </BaseLayout>

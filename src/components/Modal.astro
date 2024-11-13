@@ -1,0 +1,125 @@
+---
+import { Icon } from 'astro-icon/components'
+import '../styles/global.css'
+---
+
+<aside class='modal'>
+  <section class='modal-half modal-about'>
+    <p class='modal-title font-bold'>Here's a bit about me.</p>
+    <h2 class='modal-subtitle font-bold'>Technical Writer</h2>
+    <p class='modal-para'>
+      I'm a <b class='text-fishbones'>professional frontend developer</b> with a
+      strong passion for developing websites with{' '}
+      <b class='text-fishbones'>great user experiences.</b>
+    </p>
+    <p class='modal-para'>
+      I have experience building and maintaining production-level frontend software,
+      and continue to work on exciting new projects, websites, and applications every day.
+      Feel free to check out some of my work below!
+    </p>
+    <div class='flex flex-wrap'>
+      <figure class='modal-language'>
+        <img
+          class='w-full'
+          src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png'
+          alt='HTML icon'
+        />
+        <span class='language-name'>HTML</span>
+      </figure>
+      <figure class='modal-language'>
+        <img
+          class='w-full'
+          src='https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png'
+          alt='CSS icon'
+        />
+        <span class='language-name'>CSS</span>
+      </figure>
+      <figure class='modal-language'>
+        <img
+          class='w-full'
+          src='https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png'
+          alt='TypeScript icon'
+        />
+        <span class='language-name'>TypeScript</span>
+      </figure>
+      <figure class='modal-language'>
+        <img
+          class='w-full'
+          src='https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png'
+          alt='React icon'
+        />
+        <span class='language-name'>React</span>
+      </figure>
+    </div>
+  </section>
+  <section class='modal-half modal-contact'>
+    <Icon name='mdi:times' id='modal-exit' class='modal-exit click' />
+    <h3 class='modal-title font-bold'>Let's have a chat!</h3>
+    <h4 class='modal-subtitle font-bold'>I'm currently open to new opportunities.</h4>
+    <form id='contact-form'>
+      <div class='mb-5'>
+        <label for='name'>Name</label>
+        <input id='name' name='name' type='text' required />
+      </div>
+      <div class='mb-5'>
+        <label for='email'>E-mail</label>
+        <input id='email' name='email' type='email' required />
+      </div>
+      <div class='mb-5'>
+        <label for='message'>Message</label>
+        <textarea id='message' name='message' required />
+      </div>
+      <button type="submit" class="form-submit">
+        Send it my way
+      </button>
+    </form>
+    <div class="modal-overlay modal-overlay--loading">
+      <Icon name="mdi:loading" class='spinner' />
+    </div>
+    <div class="modal-overlay modal-overlay--success">
+      Thanks for the message! Looking forward to speaking with you soon.
+    </div>
+  </section>
+</aside>
+
+<script>
+  import { isModalOpen } from '../store'
+  import emailjs from '@emailjs/browser'
+
+  function toggleModal() {
+    if (isModalOpen.get()) {
+      isModalOpen.set(false)
+      return document.body.classList.remove('modal--open')
+    }
+    isModalOpen.set(true)
+    document.body.classList.add('modal--open')
+  }
+  document.getElementById('modal-exit')?.addEventListener('click', toggleModal)
+
+  function contact(e: SubmitEvent) {
+    e.preventDefault()
+
+    const loading = document.querySelector(".modal-overlay--loading")!
+    const success = document.querySelector(".modal-overlay--success")!
+    loading.classList.add("modal-overlay--visible")
+
+    emailjs
+      .sendForm(
+        "service_ixruf82",
+        "template_hdrdoj8",
+        e.target as HTMLFormElement,
+        "user_dAU3g6AZMCL24O4sHSoQu"
+      )
+      .then(() => {
+        loading.classList.remove("modal-overlay--visible")
+        success.classList.add("modal-overlay--visible")
+      })
+      .catch(() => {
+        loading.classList.remove("modal-overlay--visible")
+        alert(
+          "The e-mail service is temporarily unavailable. Please contact me directly at ethan@ethansalonga.dev!"
+        )
+      })
+  }
+  document.getElementById('contact-form')?.addEventListener('submit', contact)
+</script>
