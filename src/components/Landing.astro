@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon/components'
+import Resume from '../pdfs/resume.pdf'
+
+const linkedinLink = 'https://www.linkedin.com/in/ethan-salonga/'
+const githubLink = 'https://github.com/ethansalonga'
+---
+
+<section id='landing'>
+  <div class='landing-content'>
+    <p class='landing-title'>Hey,</p>
+    <h1 class='landing-title !text-fishbones'>I'm Ethan.</h1>
+    <p class='landing-para'>
+      I'm an aspiring <b class='text-fishbones'>Technical Writer</b> with a professional
+      background in biomedical engineering and web development.
+      <br />
+      Here's a bit more{' '}<b id='about-me' class='text-powpow click'>about me</b>.
+    </p>
+    <ul class='mt-4 flex'>
+      <a
+        href={linkedinLink}
+        target='_blank'
+        class='bg-powpow text-F5F5F5 w-8 h-8 text-xl mr-3 flex justify-center items-center rounded-full click'
+      >
+        <Icon name='mdi:linkedin' />
+      </a>
+      <a
+        href={githubLink}
+        target='_blank'
+        class='bg-powpow text-F5F5F5 w-8 h-8 text-xl mr-3 flex justify-center items-center rounded-full click'
+      >
+        <Icon name='mdi:github' />
+      </a>
+      <a href={Resume} target='_blank' class='bg-powpow text-F5F5F5 w-8 h-8 text-xl mr-3 flex justify-center items-center rounded-full click'>
+        <Icon name='mdi:file' />
+      </a>
+    </ul>
+  </div>
+  <a href='#'>
+    <button id='mail-btn' class='mail-btn click'>
+      <Icon name='mdi:envelope' />
+    </button>
+  </a>
+  <a href='#projects' class='scroll'>
+    <div class='scroll-icon click'></div>
+  </a>
+</section>
