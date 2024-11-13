@@ -6,9 +6,10 @@ import Projects from '../components/projects/Projects.astro'
 import '../styles/global.css'
 
 const pageTitle = 'Ethan Salonga | Technical Writer'
+const pageDescription = 'Welcome to Ethan Salonga\'s eportfolio – explore my journey as a technical writer, web developer, and storyteller. Discover my projects, blog, and creative works that bring ideas to life.'
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
 	<Modal />
 	<Landing />
   <Projects />
