@@ -43,9 +43,9 @@ import '../../styles/global.css'
   }
   document.getElementById('about')?.addEventListener('click', toggleModal)
 
-  function toggleDarkMode () {
+  function toggleDarkMode() {
     isDarkMode.set(!isDarkMode.get())
-    if (!isDarkMode.get()) {
+    if (isDarkMode.get()) {
       document.body.classList.add('dark-theme')
     } else {
       document.body.classList.remove('dark-theme')
