@@ -1,10 +1,67 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import Image from 'astro/components/Image.astro'
 
-const pageTitle = ''
-const pageDescription = ''
+const pageTitle = 'Ethan Salonga | Technical Writing Blog'
+const pageDescription = 'Stay updated with Ethan Salonga\'s insights on technical writing, software development, and coding. Explore practical tips, tutorials, and personal reflections to inspire and inform.'
+
+const allPosts = await Astro.glob('./posts/*.md')
+const sortedPosts = allPosts.sort((a, b) => {
+  const dateA = Date.parse(a.frontmatter.pubDate)
+  const dateB = Date.parse(b.frontmatter.pubDate)
+  return dateB - dateA
+})
+const latestPost = sortedPosts[0]
+const morePosts = sortedPosts.slice(1, sortedPosts.length)
+
+function formatDate(date: string) {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  }).format(new Date(date))
+}
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-  <p>Blog</p>
+  <section id='blog'>
+    <div class='container row !mb-8'>
+      <h1 class='text-2xl text-center text-fishbones font-bold mb-8'>
+        Latest Post
+      </h1>
+      <article class='max-w-screen-sm mx-auto text-white'>
+        <h3 class='mb-4 text-4xl font-bold tracking-wide text-center'>{latestPost.frontmatter.title}</h3>
+        <Image 
+        src={latestPost.frontmatter.image.url} 
+        alt={latestPost.frontmatter.image.alt}
+        width='640'
+        height='320'
+        class='rounded-2xl mb-4' 
+        />
+        <p class='text-lg'>Published {formatDate(latestPost.frontmatter.pubDate)} — {latestPost.frontmatter.readTime} minute read</p>
+        <p>{latestPost.frontmatter.preview}</p>
+      </article>
+    </div>
+    <div class='container row'>
+      <h2 class='text-2xl text-center text-fishbones font-bold mb-8'>
+        More Posts
+      </h2>
+      <div class='flex flex-col gap-y-16'>
+        {morePosts.map((post) => (
+          <article class='max-w-screen-sm mx-auto text-white'>
+          <h3 class='mb-8 text-4xl font-bold tracking-wide text-center'>{post.frontmatter.title}</h3>
+          <Image 
+            src={post.frontmatter.image.url} 
+            alt={post.frontmatter.image.alt}
+            width='640'
+            height='320'
+            class='rounded-2xl mb-4' 
+            />
+          <p class='text-lg'>Published {formatDate(post.frontmatter.pubDate)} — {post.frontmatter.readTime} minute read</p>
+          <p>{post.frontmatter.preview}</p>
+        </article>
+      ))}
+      </div>
+    </div>
+  </section>
 </BaseLayout>

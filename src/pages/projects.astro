@@ -46,9 +46,9 @@ const projectsArr = [
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <section id='projects'>
     <div class='container row'>
-      <h2 class='projects-title font-bold'>
+      <h1 class='projects-title font-bold'>
         Here are some of my <span class='text-fishbones'>coding projects:</span>
-      </h2>
+      </h1>
       <ul>
         {projectsArr.map((project) => (
           <li class='pb-32'>
@@ -56,8 +56,8 @@ const projectsArr = [
               <Image src={project.screenshot} alt={project.alt} class='project-img' />
               <div class='project-wrapper-bg' />
               <div class='project-description'>
-                <h3 class='project-description-title font-bold'>{project.title}</h3>
-                <h4 class='project-description-subtitle font-bold'>{project.languages}</h4>
+                <h2 class='project-description-title font-bold'>{project.title}</h2>
+                <h3 class='project-description-subtitle font-bold'>{project.languages}</h3>
                 <p class='project-description-para'>{project.description}</p>
                 <div class='flex'>
                   {project.githubLink && (

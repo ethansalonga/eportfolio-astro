@@ -89,7 +89,8 @@ textarea:focus {
 header > *,
 #landing > *,
 .scroll,
-#projects > * {
+#projects > *,
+#blog > * {
   opacity: 1;
   visibility: visible;
   transition: all 300ms 600ms;
@@ -98,7 +99,8 @@ header > *,
 .modal--open header > *,
 .modal--open #landing > *,
 .modal--open .scroll,
-.modal--open #projects > * {
+.modal--open #projects > *,
+.modal--open #blog > * {
   opacity: 0;
   visibility: hidden;
   transition: all 400ms;
@@ -163,6 +165,13 @@ header > *,
   align-items: center;
 }
 
+.projects-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
 /* 
 
   DARK THEME
@@ -183,7 +192,8 @@ header > *,
 
 .dark-theme header,
 .dark-theme #landing,
-.dark-theme #projects {
+.dark-theme #projects,
+.dark-theme #blog {
   background-color: #242424;
 }
 
@@ -493,17 +503,4 @@ header > *,
   .modal-half {
     padding: 40px;
   }
-}
-
-/* 
-
-  PROJECTS
-  
-*/
-
-.projects-title {
-  text-align: center;
-  font-size: 48px;
-  margin-bottom: 60px;
-  position: relative;
 }
