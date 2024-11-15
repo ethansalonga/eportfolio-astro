@@ -30,16 +30,27 @@ function formatDate(date: string) {
         Latest Post
       </h1>
       <article class='max-w-screen-sm mx-auto blog-card'>
-        <h3 class='mb-4 text-4xl font-bold tracking-wide text-center'>{latestPost.frontmatter.title}</h3>
-        <Image 
-        src={latestPost.frontmatter.image.url} 
-        alt={latestPost.frontmatter.image.alt}
-        width='640'
-        height='320'
-        class='rounded-2xl mb-4' 
-        />
+        <h3 class='mb-4 text-4xl font-bold tracking-wide text-center hover:underline'>
+          <a href={latestPost.url}>
+            {latestPost.frontmatter.title}
+          </a>
+        </h3>
+        <a href={latestPost.url}>
+          <Image 
+            src={latestPost.frontmatter.image.url} 
+            alt={latestPost.frontmatter.image.alt}
+            width='640'
+            height='320'
+            class='rounded-2xl mb-4' 
+          />
+        </a>
         <p class='text-lg'>Published {formatDate(latestPost.frontmatter.pubDate)} — {latestPost.frontmatter.readTime} minute read</p>
-        <p>{latestPost.frontmatter.preview}</p>
+        <p>
+          {latestPost.frontmatter.preview}...
+          <span class='text-powpow hover:underline'>
+            <a href={latestPost.url}>read more</a>
+          </span>
+        </p>
       </article>
     </div>
     <div class='container row !pb-16'>
@@ -49,16 +60,27 @@ function formatDate(date: string) {
       <div class='flex flex-col gap-y-16'>
         {morePosts.map((post) => (
           <article class='max-w-screen-sm mx-auto blog-card'>
-          <h3 class='mb-8 text-4xl font-bold tracking-wide text-center'>{post.frontmatter.title}</h3>
-          <Image 
-            src={post.frontmatter.image.url} 
-            alt={post.frontmatter.image.alt}
-            width='640'
-            height='320'
-            class='rounded-2xl mb-4' 
+          <h3 class='mb-8 text-4xl font-bold tracking-wide text-center hover:underline'>
+            <a href={post.url}>
+              {post.frontmatter.title}
+            </a>
+          </h3>
+          <a href={post.url}>
+            <Image 
+              src={post.frontmatter.image.url} 
+              alt={post.frontmatter.image.alt}
+              width='640'
+              height='320'
+              class='rounded-2xl mb-4' 
             />
+          </a>
           <p class='text-lg'>Published {formatDate(post.frontmatter.pubDate)} — {post.frontmatter.readTime} minute read</p>
-          <p>{post.frontmatter.preview}</p>
+          <p>
+            {post.frontmatter.preview}...
+            <span class='text-powpow hover:underline'>
+              <a href={post.url}>read more</a>
+            </span>
+          </p>
         </article>
       ))}
       </div>

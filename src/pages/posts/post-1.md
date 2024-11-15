@@ -9,7 +9,7 @@ image:
     alt: The Astro logo on a dark background with a pink glow.
 tags: [astro, blogging, learning in public]
 readTime: 1
-preview: Welcome to my new blog about learning Astro! Here, I will share my learning journey as I build a new website...
+preview: Welcome to my new blog about learning Astro! Here, I will share my learning journey as I build a new website
 ---
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 

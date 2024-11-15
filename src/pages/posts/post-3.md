@@ -9,6 +9,6 @@ image:
     alt: The Astro logo on a dark background with rainbow rays.
 tags: [astro, learning in public, setbacks, community]
 readTime: 8
-preview: It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the Discord community is really friendly and helpful!...
+preview: It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the Discord community is really friendly and helpful!
 ---
 It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
