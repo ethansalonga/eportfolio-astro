@@ -1,12 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import BaseLayout from '../../layouts/BaseLayout.astro'
 import Image from 'astro/components/Image.astro'
-import { formatDate } from '../helpers/formatDate'
+import { formatDate } from '../../helpers/formatDate'
 
 const pageTitle = 'Ethan Salonga | Technical Writing Blog'
 const pageDescription = 'Stay updated with Ethan Salonga\'s insights on technical writing, software development, and coding. Explore practical tips, tutorials, and personal reflections to inspire and inform.'
 
-const allPosts = await Astro.glob('./posts/*.md')
+const allPosts = await Astro.glob('./*.md')
 const sortedPosts = allPosts.sort((a, b) => {
   const dateA = Date.parse(a.frontmatter.pubDate)
   const dateB = Date.parse(b.frontmatter.pubDate)

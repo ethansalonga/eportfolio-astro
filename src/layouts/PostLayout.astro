@@ -24,7 +24,7 @@ const { frontmatter } = Astro.props
       <div class='flex gap-x-4 text-powpow pb-6'>
         {frontmatter.tags.map((tag: string) => (
           <p class='hover:underline'>
-            <a href={`/tags/${tag}`}>{tag}</a>
+            <a href={`/blog/tags/${tag}`}>{tag}</a>
           </p>
         ))}
       </div>
