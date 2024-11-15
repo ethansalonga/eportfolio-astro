@@ -41,7 +41,7 @@ import '../../styles/global.css'
 </header>
 
 <script>
-  import { isModalOpen, isDarkMode } from '../../store'
+  import { isModalOpen } from '../../store'
 
   function toggleModal() {
     if (isModalOpen.get()) {
@@ -52,14 +52,36 @@ import '../../styles/global.css'
     document.body.classList.add('modal--open')
   }
   document.getElementById('about')?.addEventListener('click', toggleModal)
+</script>
 
-  function toggleDarkMode() {
-    isDarkMode.set(!isDarkMode.get())
-    if (isDarkMode.get()) {
-      document.body.classList.add('dark-theme')
-    } else {
-      document.body.classList.remove('dark-theme')
+<script is:inline>
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
     }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.body.classList.remove('dark-theme')
+  } else {
+    document.body.classList.add('dark-theme')
   }
-  document.getElementById('dark-mode')?.addEventListener('click', toggleDarkMode)
+
+  window.localStorage.setItem('theme', theme)
+
+  const handleToggleClick = () => {
+    const element = document.body
+    element.classList.toggle('dark-theme')
+
+    const isDarkMode = element.classList.contains('dark-theme')
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light')
+  }
+
+  document
+    .getElementById('dark-mode')
+    .addEventListener('click', handleToggleClick)
 </script>
