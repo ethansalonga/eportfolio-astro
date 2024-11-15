@@ -7,7 +7,7 @@ import '../styles/global.css'
 const { frontmatter } = Astro.props
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={frontmatter.title} pageDescription={frontmatter.description}>
   <section id='blog-post' class='text-242424'>
     <div class='container w-full max-w-screen-sm'>
       <Image
