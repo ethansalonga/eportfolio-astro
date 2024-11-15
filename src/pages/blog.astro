@@ -29,7 +29,7 @@ function formatDate(date: string) {
       <h1 class='text-2xl text-center text-fishbones font-bold mb-8'>
         Latest Post
       </h1>
-      <article class='max-w-screen-sm mx-auto text-white'>
+      <article class='max-w-screen-sm mx-auto blog-card'>
         <h3 class='mb-4 text-4xl font-bold tracking-wide text-center'>{latestPost.frontmatter.title}</h3>
         <Image 
         src={latestPost.frontmatter.image.url} 
@@ -48,7 +48,7 @@ function formatDate(date: string) {
       </h2>
       <div class='flex flex-col gap-y-16'>
         {morePosts.map((post) => (
-          <article class='max-w-screen-sm mx-auto text-white'>
+          <article class='max-w-screen-sm mx-auto blog-card'>
           <h3 class='mb-8 text-4xl font-bold tracking-wide text-center'>{post.frontmatter.title}</h3>
           <Image 
             src={post.frontmatter.image.url} 

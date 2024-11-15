@@ -182,7 +182,8 @@ header > *,
 .dark-theme .landing-title,
 .dark-theme .landing-para,
 .dark-theme .projects-title,
-.dark-theme .section-subtitle {
+.dark-theme .section-subtitle,
+.dark-theme .blog-card {
   color: #F5F5F5;
 }
 
@@ -503,4 +504,14 @@ header > *,
   .modal-half {
     padding: 40px;
   }
+}
+
+/* 
+
+  BLOG
+  
+*/
+
+.blog-card {
+  color: #242424;
 }
