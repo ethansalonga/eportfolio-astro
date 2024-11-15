@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BaseLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: My Second Blog Post
 pubDate: 2024-11-08
 author: Ethan Salonga

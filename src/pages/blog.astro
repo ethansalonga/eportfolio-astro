@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Image from 'astro/components/Image.astro'
+import { formatDate } from '../helpers/formatDate'
 
 const pageTitle = 'Ethan Salonga | Technical Writing Blog'
 const pageDescription = 'Stay updated with Ethan Salonga\'s insights on technical writing, software development, and coding. Explore practical tips, tutorials, and personal reflections to inspire and inform.'
@@ -13,14 +14,6 @@ const sortedPosts = allPosts.sort((a, b) => {
 })
 const latestPost = sortedPosts[0]
 const morePosts = sortedPosts.slice(1, sortedPosts.length)
-
-function formatDate(date: string) {
-  return new Intl.DateTimeFormat('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  }).format(new Date(date))
-}
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>

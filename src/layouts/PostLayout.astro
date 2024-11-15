@@ -1,21 +1,34 @@
 ---
-import BaseLayout from "./BaseLayout.astro"
+import BaseLayout from './BaseLayout.astro'
+import Image from 'astro/components/Image.astro'
+import { formatDate } from '../helpers/formatDate'
+import '../styles/global.css'
+
 const { frontmatter } = Astro.props
 ---
 
 <BaseLayout>
-  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by: {frontmatter.author}</p>
-  <img src={frontmatter.image.url} width='300' alt={frontmatter.image.alt} />
-  <div class='tags'>
-    {
-      frontmatter.tags.map((tag: string) => (
-        <p class='tag'>
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
-  <slot />
+  <section id='blog-post' class='text-242424'>
+    <div class='container w-full max-w-screen-sm'>
+      <Image
+        src={frontmatter.image.url} 
+        alt={frontmatter.image.alt} 
+        width='640'
+        height='360' 
+        class='w-full rounded-2xl'
+      />
+      <h1 class='pt-8 pb-4 text-5xl font-bold tracking-wide'>
+        {frontmatter.title}
+      </h1>
+      <p class='text-lg'>Published on {formatDate(frontmatter.pubDate)} — <span class='italic'>{frontmatter.readTime} minute read</span></p>
+      <div class='flex gap-x-4 text-powpow pb-6'>
+        {frontmatter.tags.map((tag: string) => (
+          <p class='hover:underline'>
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </p>
+        ))}
+      </div>
+      <slot />
+    </div>
+</section>
 </BaseLayout>

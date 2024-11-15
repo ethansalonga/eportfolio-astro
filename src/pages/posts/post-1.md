@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BaseLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: My First Blog Post
 pubDate: 2024-11-13
 description: This is the first post of my new Astro blog.
@@ -12,6 +12,8 @@ readTime: 1
 preview: Welcome to my new blog about learning Astro! Here, I will share my learning journey as I build a new website
 ---
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+
+<br>
 
 ## What I've accomplished
 

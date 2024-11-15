@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BaseLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: My Third Blog Post
 pubDate: 2024-11-10
 author: Ethan Salonga

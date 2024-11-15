@@ -183,7 +183,8 @@ header > *,
 .dark-theme .landing-para,
 .dark-theme .projects-title,
 .dark-theme .section-subtitle,
-.dark-theme .blog-card {
+.dark-theme .blog-card,
+.dark-theme #blog-post {
   color: #F5F5F5;
 }
 
@@ -194,7 +195,8 @@ header > *,
 .dark-theme header,
 .dark-theme #landing,
 .dark-theme #projects,
-.dark-theme #blog {
+.dark-theme #blog, 
+.dark-theme #blog-post {
   background-color: #242424;
 }
 
