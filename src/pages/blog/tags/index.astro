@@ -1,38 +1,37 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro'
+
 const allPosts = await Astro.glob('../*.md')
 const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())]
-const pageTitle = 'Tag Index'
+const pageTitle = 'Explore Tags | Ethan Salonga\'s Blog'
+const pageDescription = 'Discover all the tags used on Ethan Salonga\'s blog. Browse topics and explore a wide range of articles, insights, and stories curated for you.'
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <div class='tags'>
-    {
-      tags.map((tag) => (
-        <p class='tag'>
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <section id='tags'>
+    <div class='container row'>
+      <div class='w-full max-w-screen-sm mx-auto py-8 min-screen-height'>
+        <h1 class='text-2xl font-bold tracking-wider mb-4'>
+          All tags
+        </h1>
+        <ul class='flex flex-wrap gap-4'>
+          {
+            tags.map((tag) => (
+              <a href={`/tags/${tag}`}>
+                <p class='tag rounded-md py-2 px-4'>
+                  {tag}
+                </p>
+              </a>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
-  a {
-    color: #00539f;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
+  .min-screen-height {
+    min-height: calc(100vh - 96px);
   }
 </style>

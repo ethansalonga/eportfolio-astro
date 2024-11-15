@@ -184,7 +184,8 @@ header > *,
 .dark-theme .projects-title,
 .dark-theme .section-subtitle,
 .dark-theme .blog-card,
-.dark-theme #blog-post {
+.dark-theme #blog-post,
+.dark-theme #tags {
   color: #F5F5F5;
 }
 
@@ -196,8 +197,19 @@ header > *,
 .dark-theme #landing,
 .dark-theme #projects,
 .dark-theme #blog, 
-.dark-theme #blog-post {
+.dark-theme #blog-post,
+.dark-theme #tags {
   background-color: #242424;
+}
+
+.tag {
+  color: #F5F5F5;
+  background-color: #242424;
+}
+
+.dark-theme .tag {
+  color: #242424;
+  background-color: #F5F5F5;
 }
 
 .dark-theme .scroll-icon {

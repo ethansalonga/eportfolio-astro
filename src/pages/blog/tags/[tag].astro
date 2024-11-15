@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro'
 import type { MarkdownInstance } from 'astro'
+import '../../../styles/global.css'
 
 export async function getStaticPaths() {
   const allPosts: MarkdownInstance<Record<string, any>>[] = await Astro.glob('../*.md')
@@ -22,19 +23,38 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params
 const { posts } = Astro.props
+const pageTitle = `Posts Tagged with ${tag} | Ethan Salonga's Blog`
+const pageDescription = `Explore all posts tagged with ${tag} on Ethan Salonga's blog. Dive into articles, insights, and stories covering topics related to ${tag}.`
 ---
 
-<BaseLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
-  <ul>
-    {
-      posts.map((post) => (
-      <li>
-        <a href={post.url}>
-          {post.frontmatter.title}
-        </a>
-      </li>
-      ))
-    }
-  </ul>
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <section id='tags'>
+    <div class='container row'>
+      <div class='w-full max-w-screen-sm mx-auto py-8 min-screen-height'>
+        <h1 class='text-2xl font-bold tracking-wider mb-4'>
+          Posts tagged with <span class='text-fishbones'>{tag}</span>
+          <span class='text-sm font-normal tracking-normal text-powpow'>
+            <a href='/blog/tags' class='hover:underline'>
+              view all tags
+            </a>
+          </span>
+        </h1>
+        <ul>
+          {posts.map((post) => (
+            <li class='list-disc'>
+              <a href={post.url} class='hover:underline'>
+                {post.frontmatter.title}
+            </a>
+          </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .min-screen-height {
+    min-height: calc(100vh - 96px);
+  }
+</style>
