@@ -34,10 +34,10 @@ const morePosts = sortedPosts.slice(1, sortedPosts.length)
             alt={latestPost.frontmatter.image.alt}
             width='640'
             height='320'
-            class='rounded-2xl mb-4' 
+            class='rounded-2xl mb-4 h-96' 
           />
         </a>
-        <p class='text-lg'>Published {formatDate(latestPost.frontmatter.pubDate)} — {latestPost.frontmatter.readTime} minute read</p>
+        <p class='text-lg'>Published {formatDate(latestPost.frontmatter.pubDate)} — {latestPost.frontmatter.readTime.toString()} minute read</p>
         <p>
           {latestPost.frontmatter.preview}...
           <span class='text-powpow hover:underline'>
@@ -64,10 +64,10 @@ const morePosts = sortedPosts.slice(1, sortedPosts.length)
               alt={post.frontmatter.image.alt}
               width='640'
               height='320'
-              class='rounded-2xl mb-4' 
+              class='rounded-2xl mb-4 h-96' 
             />
           </a>
-          <p class='text-lg'>Published {formatDate(post.frontmatter.pubDate)} — {post.frontmatter.readTime} minute read</p>
+          <p class='text-lg'>Published {formatDate(post.frontmatter.pubDate)} — {post.frontmatter.readTime.toString()} minute read</p>
           <p>
             {post.frontmatter.preview}...
             <span class='text-powpow hover:underline'>
