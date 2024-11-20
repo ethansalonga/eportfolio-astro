@@ -21,7 +21,12 @@ const { frontmatter } = Astro.props
       <h1 class='pt-8 pb-4 text-5xl font-bold tracking-wide'>
         {frontmatter.title}
       </h1>
-      <p class='text-lg'>Published on {formatDate(frontmatter.pubDate)} — <span class='italic'>{frontmatter.readTime} minute read</span></p>
+      <p class='text-lg'>
+        Updated on {formatDate(frontmatter.lastModDate)} | 
+        <span>Published on {formatDate(frontmatter.pubDate)}</span> |
+        <span class='italic'>{frontmatter.readTime} minute read</span>
+      </p>
+      <p class='text-sm'></p>
       <div class='flex gap-x-4 text-powpow pb-6'>
         {frontmatter.tags.map((tag: string) => (
           <p class='hover:underline'>
