@@ -7,7 +7,7 @@ lastModDate: 2024-11-20
 author: Ethan Salonga
 image:
     url: https://previews.dropbox.com/p/thumb/ACf4bg9m1cbqfxAR014_aYrtx1xigWPwSFbCECew8femgwbpCLqRMt-6glzMNLdHtQVdSlDKvOAqSzvn_J8s8z3WQNxH5D9HWSHL8HGWlBGmJQtVOuhuiDbyv8l0r41UWFUOe4SWzWYas_Zrmkh_DW4VFVMQ11mFopR1BAbJwZWt8nNbThClVFUCcC29nCSR6QgJTy_Xz3qJOOggpxWQpQaP-lY-nxTWZx-9IaaiR19jwPFBF-La-PKz9UjmykaB_DFhQJPkIRvgP_kNQnblx3JdAZfsvbKo5IPiRZ_sciPnNtZUsjOJ4LD7K7or_QfSklo/p.png
-    alt: The Astro logo on a dark background with a pink glow.
+    alt: Fountain pen writing words on paper.
 tags: [technical writing, career, blogging]
 readTime: 5
 preview: About one week ago I decided that I wanted to become a technical writer and make a career out of it. This would be the second time in my life I'm making a career transition, and it feels a bit conflicting at 26 years old
