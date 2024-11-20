@@ -10,7 +10,7 @@ image:
     alt: The Astro logo on a dark background with a pink glow.
 tags: [technical writing, career, blogging]
 readTime: 5
-preview: About one week ago I decided that I wanted to become a technical writer and make a career out of it. This would be the second time in my life I'm making a career transition, and it feels a bit conflicting at 26 years old.
+preview: About one week ago I decided that I wanted to become a technical writer and make a career out of it. This would be the second time in my life I'm making a career transition, and it feels a bit conflicting at 26 years old
 ---
 About one week ago I decided that I wanted to become a technical writer and make a career out of it. This would be the second time in my life I'm making a career transition, and it feels a bit conflicting at 26 years old.  
 <br>
