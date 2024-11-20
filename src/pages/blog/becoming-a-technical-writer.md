@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: Becoming a Technical Writer
-description: Description
+description: Thinking of making a career transition into technical writing? In this post, I reflect on my journey from biomedical engineering to web development, and now to technical writing. At 26, I face the challenge of balancing career stability with pursuing a lifelong passion for writing. Explore my story, the skills I've gained, and why I believe technical writing could be the perfect fit for me.
 pubDate: 2024-11-19
 lastModDate: 2024-11-19
 author: Ethan Salonga
