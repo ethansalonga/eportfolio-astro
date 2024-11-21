@@ -10,7 +10,26 @@
   letter-spacing: 0.025em;
 }
 
+#blog-post h3 {
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: 0.025em;
+}
+
 #blog-post li {
   list-style-type: disc;
   margin-left: 18px;
+}
+
+#blog-post pre {
+  padding: 1rem;
+}
+
+#blog-post a {
+  color: #97477C;
+}
+
+#blog-post a:hover {
+  color: #97477C;
+  text-decoration: underline;
 }
