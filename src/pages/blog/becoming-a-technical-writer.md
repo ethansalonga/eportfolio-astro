@@ -6,7 +6,7 @@ pubDate: 2024-11-19
 lastModDate: 2024-11-20
 author: Ethan Salonga
 image:
-    url: https://previews.dropbox.com/p/thumb/ACf4bg9m1cbqfxAR014_aYrtx1xigWPwSFbCECew8femgwbpCLqRMt-6glzMNLdHtQVdSlDKvOAqSzvn_J8s8z3WQNxH5D9HWSHL8HGWlBGmJQtVOuhuiDbyv8l0r41UWFUOe4SWzWYas_Zrmkh_DW4VFVMQ11mFopR1BAbJwZWt8nNbThClVFUCcC29nCSR6QgJTy_Xz3qJOOggpxWQpQaP-lY-nxTWZx-9IaaiR19jwPFBF-La-PKz9UjmykaB_DFhQJPkIRvgP_kNQnblx3JdAZfsvbKo5IPiRZ_sciPnNtZUsjOJ4LD7K7or_QfSklo/p.png
+    url: https://i.postimg.cc/hjL82jpK/pen-on-paper.webp
     alt: Fountain pen writing words on paper.
 tags: [technical writing, career, blogging]
 readTime: 5
@@ -16,7 +16,7 @@ About one week ago I decided that I wanted to become a technical writer and make
 <br>
 One part of me believes I should be sticking to one career at this age, gaining valuable experience and climbing up the corporate ladder. The other part of me is constantly reminding myself that life is short, and that I should seize the opportunity to take risks and explore what I'm truly passionate about while I'm young.  
 <br>
-![Woman sitting on a grey cliff](https://previews.dropbox.com/p/thumb/ACepUAW0503d8YgJHh5yEPsHCyRsLXdWaAdHdRbYszVzq3UF_37XZECCvTZqW-KNLK-i-0iBagVnFte9QEyAxEa4J-1hTXbKN25xlD2uxXW_A1AkWnTHrRMZ3AP2ILtVQ7i9LLirwSoyAoRhtfYpHQ5BhzzAf4E6FIRxc7IYuh7YAqHTJ0747YcSoZ7bpONr0mbYDfw6VdaEttFm0jG2mEkD_kfiFWH7VpxTcfCakhfYVZDrwK2_aBTxlQEsn9_0U7j728cF9O-M9LG01Xfc6GUqZuGR_Li4roz1ag0t0ItW1RyzWyU6MvXg5eeD9szyj7I/p.png)
+![Woman sitting on a grey cliff](https://i.postimg.cc/gjGVQWT8/journey.webp)
 <br>
 ## Journey to Becoming a Technical Writer
 <br>
